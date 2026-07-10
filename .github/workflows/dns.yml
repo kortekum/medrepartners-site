@@ -1,0 +1,37 @@
+name: Set up email DNS records
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/dns.yml']
+
+jobs:
+  dns:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+      - name: Add Google Workspace DNS records
+        run: |
+          set -e
+          D=medrepartners.com
+          LIST=$(doctl compute domain records list $D --format Data --no-header)
+          if ! grep -qF "google-site-verification" <<< "$LIST"; then
+            doctl compute domain records create $D --record-type TXT --record-name "@" --record-data "google-site-verification=vbUNfI8Oh4yxxTs6jL5BlWunrzTffqdgW-l8hDNEnAE" --record-ttl 3600
+          fi
+          if ! grep -qF "smtp.google.com" <<< "$LIST"; then
+            doctl compute domain records create $D --record-type MX --record-name "@" --record-data "smtp.google.com." --record-priority 1 --record-ttl 3600
+          fi
+          if ! grep -qF "v=spf1" <<< "$LIST"; then
+            doctl compute domain records create $D --record-type TXT --record-name "@" --record-data "v=spf1 include:_spf.google.com ~all" --record-ttl 3600
+          fi
+          if ! grep -qF "v=DMARC1" <<< "$LIST"; then
+            doctl compute domain records create $D --record-type TXT --record-name "_dmarc" --record-data "v=DMARC1; p=none; rua=mailto:erika@medrepartners.com" --record-ttl 3600
+          fi
+
+      - name: Show all DNS records
+        run: doctl compute domain records list medrepartners.com --format ID,Type,Name,Data,Priority
