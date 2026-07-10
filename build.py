@@ -121,6 +121,8 @@ def build_page(fname, slug):
         body = body.replace(xi.group(0), f"<doc-page{dp_attrs}>", 1)
         body = body.replace("</x-import>", "</doc-page>", 1)
 
+    # retired-domain references in visible copy (print footers)
+    body = body.replace("medre.co", "medrepartners.com")
     body = rewrite_links(body).strip()
     helmet = rewrite_links(helmet)
 
@@ -133,12 +135,19 @@ def build_page(fname, slug):
 
     head_extra = []
     if url:
+        # helmet og:url values point at the retired medre.co domain with old
+        # slugs; rewrite them to the real canonical URL instead of duplicating
+        helmet = re.sub(r'(<meta property="og:url" content=")[^"]*(")',
+                        lambda m: m.group(1) + url + m.group(2), helmet)
         head_extra.append(f'<link rel="canonical" href="{url}">')
-        head_extra.append(f'<meta property="og:title" content="{title}">')
-        if desc:
+        if 'property="og:title"' not in helmet:
+            head_extra.append(f'<meta property="og:title" content="{title}">')
+        if desc and 'property="og:description"' not in helmet:
             head_extra.append(f'<meta property="og:description" content="{desc}">')
-        head_extra.append(f'<meta property="og:url" content="{url}">')
-        head_extra.append('<meta property="og:type" content="website">')
+        if 'property="og:url"' not in helmet:
+            head_extra.append(f'<meta property="og:url" content="{url}">')
+        if 'property="og:type"' not in helmet:
+            head_extra.append('<meta property="og:type" content="website">')
         head_extra.append(f'<meta property="og:site_name" content="Medre">')
         head_extra.append(f'<meta property="og:image" content="{BASE}/assets/medre_logo.png">')
         head_extra.append('<meta name="twitter:card" content="summary">')
