@@ -32,6 +32,9 @@ jobs:
           if ! grep -qF "v=DMARC1" <<< "$LIST"; then
             doctl compute domain records create $D --record-type TXT --record-name "_dmarc" --record-data "v=DMARC1; p=none; rua=mailto:erika@medrepartners.com" --record-ttl 3600
           fi
+          if ! grep -qF "v=DKIM1" <<< "$LIST"; then
+            doctl compute domain records create $D --record-type TXT --record-name "google._domainkey" --record-data "v=DKIM1;k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvWOKZ8/Ygzxc6hPo8uO7tiE9Bu7uJ4Mfcoz6VAYO/Z7CEOB/pMoJr+jKfcX6dw5ieypcPGPiqxiU4UyylugJ7tyOgmTH/1P8gUb6Q+1qiCSk7CJZUmBq2BDAEyPShjdc8hYrf+A0K/9YYmcB240fH8N4rhceBuOh9We/b0Sjubi05jgyDywbGXFZWL9gXIaEB6M8UcIAleLzQkDiLHBlqiozSqyT+v7vpLedjHjwzaiWXCanjeX9zy6ib50jBKuGbqt5xC+SHW6PuNP9Ck/eIcKNGGoq3vdwMsxcwkIe7hfCWX9542Iy2puIcg5UmFzKPtZGoeo5BNziKDQ5KjXuHQIDAQAB" --record-ttl 3600
+          fi
 
-      - name: Show all DNS records
+      - name: Show all DNSrecords
         run: doctl compute domain records list medrepartners.com --format ID,Type,Name,Data,Priority
