@@ -16,6 +16,8 @@ import re
 import shutil
 import urllib.parse
 
+import schema
+
 SRC = os.path.join(os.path.dirname(os.path.abspath(__file__)), "source")
 DIST = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dist")
 BASE = "https://medrepartners.com"
@@ -55,7 +57,7 @@ REDIRECTS = {
     "resources": "/library/",
 }
 
-NOINDEX = {"404"}  # slugs excluded from sitemap
+NOINDEX = {"404", "print/one-page-guide", "print/sale-leaseback-checklist"}  # slugs excluded from sitemap
 
 
 def slug_to_url(slug):
@@ -151,6 +153,8 @@ def build_page(fname, slug):
         head_extra.append(f'<meta property="og:site_name" content="Medre">')
         head_extra.append(f'<meta property="og:image" content="{BASE}/assets/medre_logo.png">')
         head_extra.append('<meta name="twitter:card" content="summary">')
+        if slug.startswith("print/"):
+            head_extra.append('<meta name="robots" content="noindex">')
     else:
         head_extra.append('<meta name="robots" content="noindex">')
 
@@ -178,6 +182,7 @@ def build_page(fname, slug):
     else:
         os.makedirs(os.path.join(DIST, slug), exist_ok=True)
         out = os.path.join(DIST, slug, "index.html")
+    page = schema.inject(page, slug)
     open(out, "w", encoding="utf-8").write(page)
     return url
 
