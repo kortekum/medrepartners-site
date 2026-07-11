@@ -77,6 +77,7 @@ def org_node():
         "description": ORG_DESCRIPTION,
         "email": "hello@medrepartners.com",
         "founder": [{"@id": ERIKA_ID}, {"@id": STEVE_ID}],
+        "sameAs": ["https://www.linkedin.com/company/medrepartners"],
         "address": {
             "@type": "PostalAddress",
             "addressRegion": "CO",
