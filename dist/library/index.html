@@ -13,6 +13,9 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:#fbfaf8}
 [data-mnav] summary::-webkit-details-marker{display:none}
+.hubback{display:inline-flex;align-items:center;gap:7px;font-family:'Jost',sans-serif;font-weight:600;font-size:14px;color:#437678;text-decoration:none;border:1px solid rgba(67,118,120,0.4);border-radius:100px;padding:9px 18px;transition:.12s}
+.hubback:hover{background:#437678;color:#fff}
+.hubbackbar{max-width:1100px;margin:0 auto;padding:24px 24px 0}
 @media (max-width:880px){
   [data-rsp]{grid-template-columns:1fr!important}
   [data-foot]{padding:48px 24px!important}
@@ -132,7 +135,7 @@ section{scroll-margin-top:150px}
 @media(max-width:760px){.recent .card-grid{grid-template-columns:1fr}}
 .seeall{display:inline-block;margin-top:18px;font-family:'Jost',sans-serif;font-weight:600;font-size:14px;color:var(--teal);text-decoration:none}
 .seeall:hover{color:var(--teal-d)}
-#results{display:none}
+
 .results-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
 .results-head .hl{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
 .open-hub{font-family:'Jost',sans-serif;font-weight:600;font-size:14px;color:var(--teal);text-decoration:none;border:1px solid var(--teal-l);padding:8px 14px;border-radius:6px}
