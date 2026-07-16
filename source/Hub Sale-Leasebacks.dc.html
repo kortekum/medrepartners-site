@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Medical office sale-leaseback, explained | Medre Library</title>
+  <meta name="description" content="Sell your building, lease it back, free the equity. What the buyer wants, the buyback clause that decides everything, and refinance versus sale-leaseback.">
+  <meta property="og:title" content="Sale-leasebacks and locked equity">
+  <meta property="og:description" content="Free the equity in your walls. What the buyer is counting on, and the one clause that decides whether you get the building back.">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/medre_mark.png">
+  <style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#fbfaf8}
+[data-mnav] summary::-webkit-details-marker{display:none}
+@media (max-width:880px){
+  [data-rsp]{grid-template-columns:1fr!important}
+  [data-foot]{padding:48px 24px!important}
+  [data-fnav]{flex-direction:column!important;align-items:flex-start!important;gap:18px!important}
+  [data-fcta]{margin-left:0!important;margin-top:6px!important;padding:11px 20px!important}
+  [data-rsp-nav]{display:none!important}
+  [data-mnav]{display:block!important}
+  [data-divider]{border-left:none!important;padding-left:0!important}
+  [data-rsp-pad]{padding-left:24px!important;padding-right:24px!important}
+}
+
+
+:root{--cream:#fbfaf8;--navy:#20385a;--navy-d:#1a2e4a;--teal:#437678;--teal-d:#385f61;--teal-l:#8ab1b4;--mint:#e9f3f3;--line:rgba(32,56,90,0.15);--muted:rgba(32,56,90,0.72)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--navy);font-family:'Nunito Sans',sans-serif;line-height:1.6}
+a{color:inherit}
+h1,h2,h3{font-family:'Jost',sans-serif;font-weight:600;margin:0}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.narrow{max-width:760px}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip-link{position:absolute;left:-999px;top:0;background:var(--navy);color:#fff;padding:10px 16px;z-index:200}
+.skip-link:focus{left:8px;top:8px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.proto{background:#fff4d6;border-bottom:1px solid #e5c766;color:#6b5510;font-size:13px;line-height:1.5;padding:10px 24px;text-align:center}
+.proto strong{font-family:'Jost',sans-serif}
+header.site{background:var(--cream);border-bottom:1px solid var(--line);height:84px;position:sticky;top:0;z-index:80;display:flex;align-items:center}
+.hdr{max-width:1100px;margin:0 auto;width:100%;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:'Jost',sans-serif;font-weight:700;font-size:24px;letter-spacing:.5px;text-decoration:none;color:var(--navy)}
+nav.top{display:flex;align-items:center;gap:30px;font-family:'Jost',sans-serif;font-size:15px;font-weight:500}
+nav.top a{color:var(--navy);text-decoration:none}
+nav.top a:hover{color:var(--teal)}
+nav.top a.active{color:var(--teal);border-bottom:2px solid var(--teal);padding-bottom:2px}
+.btn-cta{background:var(--teal);color:#fff!important;text-decoration:none;padding:11px 22px;border-radius:4px;font-weight:600;font-family:'Jost',sans-serif}
+.btn-cta:hover{background:var(--teal-d)}
+@media(max-width:860px){nav.top .navlink{display:none}}
+.hero{background:var(--navy);padding:74px 24px 60px;text-align:center}
+.hero .eyebrow{font-family:'Jost',sans-serif;color:var(--teal-l);text-transform:uppercase;letter-spacing:1.6px;font-size:13px;font-weight:600;margin:0 0 14px}
+.hero h1{font-size:46px;line-height:1.1;color:#fff;margin:0 0 20px;text-wrap:balance}
+.hero .lede{font-size:20px;color:#fff;margin:0 auto 14px;max-width:620px;text-wrap:pretty;font-weight:600;font-family:'Jost',sans-serif}
+.hero .proof{font-size:15.5px;color:rgba(255,255,255,.72);margin:0 auto;max-width:560px}
+.utility{position:sticky;top:84px;z-index:70;background:var(--cream);border-bottom:1px solid var(--line);padding:16px 0}
+.utility .inner{max-width:1100px;margin:0 auto;padding:0 24px}
+.urow{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.usub{font-family:'Jost',sans-serif;font-weight:600;font-size:14px;white-space:nowrap}
+.search{flex:1;min-width:220px;position:relative}
+.search input{width:100%;padding:11px 15px 11px 40px;border:1px solid var(--teal-l);border-radius:6px;font-family:'Nunito Sans',sans-serif;font-size:15px;background:#fff;color:var(--navy)}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);opacity:.5}
+.search .clr{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:none;background:none;cursor:pointer;font-size:18px;color:var(--muted);width:28px;height:28px;border-radius:50%;display:none}
+.search .clr:hover{background:var(--line)}
+.count{font-size:13px;color:var(--muted);font-family:'Jost',sans-serif;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{font-family:'Jost',sans-serif;font-size:13px;font-weight:500;padding:6px 13px;border-radius:100px;border:1px solid var(--line);background:#fff;color:var(--navy);cursor:pointer;text-decoration:none;transition:.12s}
+.chip:hover{border-color:var(--teal)}
+.chip.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+@media(max-width:640px){.chips{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px}.chip{white-space:nowrap}}
+section{scroll-margin-top:150px}
+.sec-head{margin:0 0 6px;font-size:30px;line-height:1.15;text-wrap:balance}
+.sec-stand{font-size:16px;color:var(--muted);margin:0 0 30px;max-width:640px}
+.block{padding:60px 0}
+.kicker{font-family:'Jost',sans-serif;color:var(--teal);text-transform:uppercase;letter-spacing:1.5px;font-size:12.5px;font-weight:600;margin:0 0 12px}
+/* SITUATIONS: the primary decision band, visually dominant */
+.sit-band{background:linear-gradient(180deg,rgba(67,118,120,0.06),rgba(67,118,120,0.02));border-top:2px solid var(--teal);border-bottom:1px solid var(--line)}
+.sit-band .sec-head{font-size:36px}
+.sit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.sit{display:flex;flex-direction:column;gap:9px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px 26px 24px;text-align:left;font:inherit;color:inherit;cursor:pointer;text-decoration:none;position:relative;transition:.14s;box-shadow:0 1px 0 rgba(32,56,90,.04)}
+.sit:hover{border-color:var(--teal);box-shadow:0 12px 30px rgba(32,56,90,.12);transform:translateY(-3px)}
+.sit .lbl{font-family:'Jost',sans-serif;font-weight:600;font-size:19px;line-height:1.28;padding-right:24px}
+.sit .note{font-size:14px;color:var(--muted);line-height:1.5}
+.sit .arw{position:absolute;top:26px;right:24px;width:26px;height:26px;border-radius:50%;background:var(--mint);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:15px;transition:.14s}
+.sit:hover .arw{background:var(--teal);color:#fff;transform:translateX(2px)}
+@media(max-width:860px){.sit-grid{grid-template-columns:1fr 1fr}.sit-band .sec-head{font-size:30px}}
+@media(max-width:560px){.sit-grid{grid-template-columns:1fr}}
+/* START HERE: slim secondary strip */
+.start{background:var(--mint);border-bottom:1px solid var(--line);padding:30px 0}
+.start .row{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.start .txt{flex:1;min-width:260px}
+.start h2{font-size:21px;margin:0 0 4px}
+.start p{font-size:14.5px;color:var(--muted);margin:0}
+.start .cap{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.start .cap input{padding:11px 13px;border:1px solid var(--teal-l);border-radius:5px;font-size:14px;font-family:'Nunito Sans',sans-serif;min-width:220px}
+.start .cap button{background:var(--teal);color:#fff;border:none;border-radius:5px;font-family:'Jost',sans-serif;font-weight:600;font-size:14px;padding:11px 18px;cursor:pointer;white-space:nowrap}
+.start .cap button:hover{background:var(--teal-d)}
+.start .read{font-size:13px;font-family:'Jost',sans-serif;font-weight:600;color:var(--teal);text-decoration:none;white-space:nowrap}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.feat{background:var(--cream);padding:28px 26px;display:flex;flex-direction:column;gap:12px;text-decoration:none;transition:.12s}
+.feat:hover{background:#fff}
+.feat .type{font-family:'Jost',sans-serif;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--teal);border:1px solid var(--teal-l);border-radius:100px;padding:3px 10px;align-self:flex-start}
+.feat h3{font-size:21px;line-height:1.28}
+.feat:hover h3{color:var(--teal)}
+.feat p{font-size:14.5px;color:var(--muted);margin:0}
+.feat .go{font-family:'Jost',sans-serif;font-weight:600;font-size:14px;color:var(--teal);margin-top:auto}
+@media(max-width:860px){.feat-grid{grid-template-columns:1fr}}
+.topics{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.topic-list{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+.topic-list a.row{display:block;padding:20px 0;border-top:1px solid var(--line);text-decoration:none}
+.topic-list a.row:hover .tname{color:var(--teal)}
+.tname{font-family:'Jost',sans-serif;font-weight:600;font-size:18px}
+.tdesc{font-size:14px;color:var(--muted);margin-top:3px}
+@media(max-width:760px){.topic-list{grid-template-columns:1fr}}
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.card{background:var(--cream);padding:24px 26px;display:flex;flex-direction:column;gap:9px;text-decoration:none;transition:.12s}
+.card:hover{background:#fff}
+.card .meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.card .type{font-family:'Jost',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--teal)}
+.card .date{font-size:12.5px;color:var(--muted)}
+.card h3{font-size:19px;line-height:1.3}
+.card:hover h3{color:var(--teal)}
+.card p{font-size:14px;color:var(--muted);margin:0}
+@media(max-width:640px){.card-grid{grid-template-columns:1fr}}
+/* Recently added: demoted */
+.recent{padding:52px 0}
+.recent .sec-head{font-size:22px}
+.recent .card-grid{grid-template-columns:1fr 1fr 1fr}
+.recent .card h3{font-size:16.5px}
+.recent .card p{display:none}
+@media(max-width:760px){.recent .card-grid{grid-template-columns:1fr}}
+.seeall{display:inline-block;margin-top:18px;font-family:'Jost',sans-serif;font-weight:600;font-size:14px;color:var(--teal);text-decoration:none}
+.seeall:hover{color:var(--teal-d)}
+#results{display:none}
+.results-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.results-head .hl{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.open-hub{font-family:'Jost',sans-serif;font-weight:600;font-size:14px;color:var(--teal);text-decoration:none;border:1px solid var(--teal-l);padding:8px 14px;border-radius:6px}
+.open-hub:hover{background:var(--teal);color:#fff}
+.back{border:none;background:none;font-family:'Jost',sans-serif;font-weight:600;font-size:14px;color:var(--teal);cursor:pointer;padding:0}
+.back:hover{color:var(--teal-d)}
+.empty{padding:48px 26px;border:1px solid var(--line);border-radius:10px;background:#fff;text-align:center}
+.empty p{font-size:16px;color:var(--muted);margin:0 0 16px;max-width:520px;margin-left:auto;margin-right:auto}
+.empty .routes{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.empty .routes a{font-family:'Jost',sans-serif;font-weight:600;font-size:14px;color:var(--teal);text-decoration:none;border:1px solid var(--teal-l);padding:9px 16px;border-radius:6px}
+.empty .routes a:hover{background:var(--teal);color:#fff}
+.related{display:flex;gap:14px;flex-wrap:wrap}
+.related a{flex:1;min-width:200px;border:1px solid var(--line);border-radius:8px;padding:18px 20px;text-decoration:none;font-family:'Jost',sans-serif;font-weight:600;font-size:16px;display:flex;justify-content:space-between;align-items:center}
+.related a:hover{border-color:var(--teal);color:var(--teal)}
+.related a span.a{color:var(--teal-l)}
+.cta{background:var(--mint)}
+.cta h2{font-size:28px;margin:0 0 12px;text-wrap:balance}
+.cta p{font-size:16px;color:var(--muted);max-width:600px;margin:0 0 22px}
+.trust{border-top:1px solid var(--line)}
+.trust h2{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--teal);margin:0 0 14px}
+.trust p{font-size:15px;max-width:680px;margin:0 0 12px}
+.trust .disc{font-size:13px;color:var(--muted)}
+footer.site{background:var(--navy-d);color:#fff;padding:48px 24px}
+footer.site .inner{max-width:1100px;margin:0 auto}
+footer.site .fb{font-family:'Jost',sans-serif;font-weight:600;font-size:19px;margin:0 0 10px}
+footer.site p.sm{font-size:13px;color:rgba(202,228,229,.6);max-width:600px;margin:0}
+footer.site nav{margin:18px 0 0;display:flex;gap:20px;flex-wrap:wrap;font-family:'Jost',sans-serif;font-size:14px}
+footer.site nav a{color:rgba(202,228,229,.7);text-decoration:none}
+footer.site nav a:hover{color:#fff}
+/* HUB page */
+.crumb{max-width:1100px;margin:0 auto;padding:16px 24px;font-family:'Jost',sans-serif;font-size:13px;color:var(--muted)}
+.crumb a{color:var(--teal);text-decoration:none}
+.crumb a:hover{text-decoration:underline}
+.hubhero{background:var(--navy);padding:56px 24px 50px}
+.hubhero .inner{max-width:820px;margin:0 auto}
+.hubhero .eyebrow{font-family:'Jost',sans-serif;color:var(--teal-l);text-transform:uppercase;letter-spacing:1.5px;font-size:12.5px;font-weight:600;margin:0 0 12px}
+.hubhero h1{font-size:42px;line-height:1.12;color:#fff;margin:0 0 16px;text-wrap:balance}
+.hubhero .dek{font-size:18px;color:rgba(255,255,255,.88);margin:0;max-width:640px}
+.hubintro{padding:52px 0 20px}
+.hubintro p{font-size:17px;line-height:1.7;margin:0 0 18px;color:#26364d}
+.hublist{padding:20px 0 56px}
+.hublist h2{font-size:22px;margin:0 0 24px}
+.magnet{background:var(--mint);border:1px solid var(--line);border-radius:12px;padding:26px 28px;margin:8px 0 0;display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.magnet .mt{flex:1;min-width:240px}
+.magnet h3{font-size:18px;margin:0 0 6px}
+.magnet p{font-size:14.5px;color:var(--muted);margin:0}
+.magnet form{display:flex;gap:10px;flex-wrap:wrap}
+.magnet input{padding:11px 13px;border:1px solid var(--teal-l);border-radius:5px;font-size:14px;font-family:'Nunito Sans',sans-serif;min-width:200px}
+.magnet button{background:var(--teal);color:#fff;border:none;border-radius:5px;font-family:'Jost',sans-serif;font-weight:600;font-size:14px;padding:11px 18px;cursor:pointer;white-space:nowrap}
+.magnet button:hover{background:var(--teal-d)}
+.hubrelated{border-top:1px solid var(--line);padding:44px 0}
+.hubrelated h2{font-size:16px;text-transform:uppercase;letter-spacing:1px;color:var(--teal);margin:0 0 16px;font-size:13px}
+.hubrelated .links{display:flex;gap:10px;flex-wrap:wrap}
+.hubrelated a{font-family:'Jost',sans-serif;font-weight:500;font-size:14px;text-decoration:none;border:1px solid var(--line);border-radius:100px;padding:8px 15px;color:var(--navy)}
+.hubrelated a:hover{border-color:var(--teal);color:var(--teal)}
+</style>
+</helmet>
+<div style="font-family:'Nunito Sans',sans-serif;color:#20385a">
+<header data-rsp-pad style="background:#fbfaf8;border-bottom:1px solid rgba(32,56,90,0.15);padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:84px;position:sticky;top:0;z-index:50">
+    <a href="/" style="display:flex;align-items:center"><img src="/assets/medre_logo.png" alt="Medre" style="height:34px;display:block"></a>
+    <nav style="display:flex;align-items:center;gap:32px;font-family:'Jost',sans-serif;font-size:15px;font-weight:500">
+      <div data-rsp-nav style="display:flex;align-items:center;gap:32px">
+        <a href="/" style="color:#20385a;text-decoration:none" style-hover="color:#437678">Home</a>
+        <a href="/how-it-works/" style="color:#20385a;text-decoration:none" style-hover="color:#437678">How It Works</a>
+        <a href="/for-practice-owners/" style="color:#20385a;text-decoration:none" style-hover="color:#437678">For Practice Owners</a>
+        <a href="/about/" style="color:#20385a;text-decoration:none" style-hover="color:#437678">About</a>
+        <a href="/library/" style="color:#437678;text-decoration:none;border-bottom:2px solid #437678;padding-bottom:2px">Library</a>
+      </div>
+      <a href="/book-a-call/" style="background:#437678;color:#ffffff;text-decoration:none;padding:12px 24px;border-radius:4px;font-weight:600" style-hover="background:#385f61">Book a Call</a>
+      <details data-mnav style="display:none;position:relative">
+        <summary aria-label="Menu" style="list-style:none;cursor:pointer;width:44px;height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px"><span style="display:block;width:22px;height:2px;background:#20385a"></span><span style="display:block;width:22px;height:2px;background:#20385a"></span><span style="display:block;width:22px;height:2px;background:#20385a"></span></summary>
+        <div style="position:absolute;right:-4px;top:62px;background:#fbfaf8;border:1px solid rgba(32,56,90,0.15);border-radius:4px;box-shadow:0 16px 40px rgba(32,56,90,0.18);padding:10px 0;min-width:230px;display:flex;flex-direction:column">
+          <a href="/" style="padding:13px 24px;color:#20385a;text-decoration:none" style-hover="color:#437678">Home</a>
+          <a href="/how-it-works/" style="padding:13px 24px;color:#20385a;text-decoration:none" style-hover="color:#437678">How It Works</a>
+          <a href="/for-practice-owners/" style="padding:13px 24px;color:#20385a;text-decoration:none" style-hover="color:#437678">For Practice Owners</a>
+          <a href="/about/" style="padding:13px 24px;color:#20385a;text-decoration:none" style-hover="color:#437678">About</a>
+          <a href="/library/" style="padding:13px 24px;color:#20385a;text-decoration:none" style-hover="color:#437678">Library</a>
+          <a href="/book-a-call/" style="padding:13px 24px;color:#437678;font-weight:600;text-decoration:none" style-hover="color:#385f61">Book a Call</a>
+        </div>
+      </details>
+    </nav>
+  </header>
+<nav class="crumb" aria-label="Breadcrumb"><a href="/library/">Library</a> &nbsp;/&nbsp; Sale-leasebacks and locked equity</nav>
+<main id="main">
+  <section class="hubhero"><div class="inner">
+    <p class="eyebrow">Medre Library</p>
+    <h1>Sale-leasebacks and locked equity</h1>
+    <p class="dek">Freeing the capital in your walls without losing the building for good.</p>
+  </div></section>
+  <section class="hubintro"><div class="wrap narrow"><p>You own the building. An investor offers to buy it and lease it back to you, and the equity in your walls becomes cash. That is the whole mechanism, and it is a real option. The questions worth your attention are all about what happens after closing.</p><p>Every sale-leaseback offer has a check and a chain. The check is the money you free up. The chain is the lease you are now bound to, on terms the buyer wrote, in a building you no longer control. Institutional buyers intend to keep your building. The lease is their product, not a courtesy.</p><p>This shelf reads those offers the way you should: the buyback terms matter more than the price, one clause usually decides whether you can ever get the building back, and a refinance may get you the same cash with a different ending. Run both before you sign either. If you have an offer on your desk right now, start with how to read it.</p></div></section>
+  <section class="hublist"><div class="wrap">
+    <h2>Everything on this shelf (3)</h2>
+    <div class="card-grid"><a class="card" href="/library/sale-leaseback-explained/"><div class="meta"><span class="type">Explainer</span><time class="date" datetime="2026-07-02">Jul 2, 2026</time></div><h3>The sale-leaseback, explained for practice owners.</h3><p>What selling your building and leasing it back actually trades away, what the buyer is counting on, and the one clause that decides whether you can ever get the building back.</p></a><a class="card" href="/library/reading-a-sale-leaseback-offer/"><div class="meta"><span class="type">Framework</span><time class="date" datetime="2026-06-04">Jun 4, 2026</time></div><h3>How to read a sale-leaseback offer without getting boxed out of ownership.</h3><p>The buyback terms matter more than the price. The clauses that decide whether you can ever get the building back, and the ones written so you can&#x27;t.</p></a><a class="card" href="/library/refinance-or-sale-leaseback/"><div class="meta"><span class="type">Framework</span><time class="date" datetime="2026-04-09">Apr 9, 2026</time></div><h3>Refinance or sale-leaseback: run both before signing either.</h3><p>Two ways to free the capital in your walls, with different costs and different endings. A side-by-side worth running before either suitor is in the room.</p></a></div>
+    <div style="margin-top:32px"><div class="magnet"><div class="mt"><h3>The Sale-Leaseback Checklist</h3><p>The buyback clauses that decide whether you ever get the building back, in a one-page checklist you can hold against any offer.</p></div><form action="/book-a-call/" method="get" onsubmit="return false"><label class="visually-hidden" for="me">Email</label><input id="me" type="email" placeholder="you@yourpractice.com"><button type="submit">Send it</button></form></div></div>
+  </div></section>
+  <section class="cta block" aria-labelledby="cta-h"><div class="wrap">
+    <h2 id="cta-h" style="font-family:'Jost',sans-serif;font-weight:600;font-size:26px;margin:0 0 12px">Bring us the document.</h2>
+    <p style="font-size:16px;color:rgba(32,56,90,0.72);max-width:600px;margin:0 0 22px">A renewal notice, a term sheet, a sale-leaseback offer, or just the town you want to practice in. Thirty minutes with the founders, real numbers, no deck. A straight answer if the answer is no.</p>
+    <a class="btn-cta" href="/book-a-call/">Book a call</a>
+  </div></section>
+  <section class="hubrelated"><div class="wrap">
+    <h2>Other shelves</h2>
+    <div class="links"><a href="/library/topics/ownership-decision/">Ownership Decision</a><a href="/library/topics/starting-a-practice/">Starting Out</a><a href="/library/topics/leases-and-renewals/">Leases &amp; Renewals</a><a href="/library/topics/buying-a-building/">Buying a Building</a><a href="/library/topics/expansion/">Expansion</a><a href="/library/topics/exit-and-succession/">Exit &amp; Succession</a></div>
+    <p style="font-size:13px;color:rgba(32,56,90,0.72);margin:22px 0 0;max-width:680px">Nothing here is legal, tax, accounting, financing, or investment advice. Bring your attorney and accountant to anything you sign, including anything from us.</p>
+  </div></section>
+</main>
+<footer data-foot style="background:#1a2e4a;padding:64px 48px;color:#ffffff">
+    <div style="max-width:1120px;margin:0 auto">
+      <img src="/assets/medre_mark_light.png" alt="" style="height:26px;display:block;margin-bottom:20px;opacity:0.85">
+      <p style="font-family:'Jost',sans-serif;font-weight:600;font-size:20px;margin:0 0 16px">Medre. The lease that ends in ownership.</p>
+      <p style="font-size:14px;line-height:1.7;color:rgba(202,228,229,0.85);max-width:560px;margin:0 0 24px">MedRe Partners, LLC. We buy the building, you lease it at fair market rent plus a small premium, and a written option at year 5 or year 10 lets you buy at a price set by independent appraisal when you exercise. Founded by a commercial real estate broker and a practicing physician.</p>
+      <nav data-fnav aria-label="Footer" style="border-top:1px solid rgba(202,228,229,0.18);margin:8px 0 24px;padding-top:20px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;font-family:'Jost',sans-serif;font-size:14px;font-weight:400">
+        <a href="/" style="color:rgba(202,228,229,0.7);text-decoration:none" style-hover="color:#ffffff">Home</a>
+        <a href="/how-it-works/" style="color:rgba(202,228,229,0.7);text-decoration:none" style-hover="color:#ffffff">How It Works</a>
+        <a href="/for-practice-owners/" style="color:rgba(202,228,229,0.7);text-decoration:none" style-hover="color:#ffffff">For Practice Owners</a>
+        <a href="/about/" style="color:rgba(202,228,229,0.7);text-decoration:none" style-hover="color:#ffffff">About</a>
+        <a href="/library/" style="color:rgba(202,228,229,0.7);text-decoration:none" style-hover="color:#ffffff">Library</a>
+        <a data-fcta href="/book-a-call/" style="margin-left:auto;color:#cae4e5;font-weight:500;text-decoration:none;border:1px solid rgba(202,228,229,0.4);padding:7px 16px;border-radius:4px" style-hover="color:#ffffff;border-color:rgba(255,255,255,0.8)">Book a Call</a>
+      </nav>
+      <p style="font-size:13px;line-height:1.6;color:rgba(202,228,229,0.6);max-width:560px;margin:0 0 10px">Medre is not a law firm, an accounting firm, or a lender. Nothing on this site is legal, tax, accounting, financing, or investment advice. Review any transaction with your own attorney and accountant before you sign.</p>
+      <p style="font-size:13px;line-height:1.6;color:rgba(202,228,229,0.6);margin:0"><a href="/privacy/" style="color:rgba(202,228,229,0.6);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(202,228,229,0.35)" style-hover="color:rgba(202,228,229,0.95);text-decoration-color:rgba(202,228,229,0.8)">Privacy</a></p>
+    </div>
+  </footer>
+</div>
+</x-dc>
+</body>
+</html>

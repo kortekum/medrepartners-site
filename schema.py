@@ -116,6 +116,63 @@ PAGE_TYPES = {
     "privacy": "WebPage",
 }
 
+# Library topic hub pages: display name + the articles listed on each shelf
+# (name, slug), page order. Drives BreadcrumbList + ItemList structured data.
+HUB_TITLES = {
+    "library/topics/ownership-decision": "The ownership decision",
+    "library/topics/starting-a-practice": "Starting a practice",
+    "library/topics/leases-and-renewals": "Leases and renewals",
+    "library/topics/buying-a-building": "Buying a building",
+    "library/topics/expansion": "Expansion and site selection",
+    "library/topics/sale-leasebacks": "Sale-leasebacks and locked equity",
+    "library/topics/exit-and-succession": "Exit and succession",
+}
+
+
+def _art(slug, name):
+    return (name, BASE + "/" + slug + "/")
+
+
+HUB_ITEMS = {
+    "library/topics/ownership-decision": [
+        _art("library/rent-buy-or-wait", "Rent, buy, or wait. The real math for a practice owner."),
+        _art("library/purchase-options", "How to tell whether a purchase option is real."),
+    ],
+    "library/topics/starting-a-practice": [
+        _art("library/first-lease-vs-logo", "Why your first lease matters more than your logo."),
+        _art("library/short-lease-or-long-lease", "Short lease or long lease when you don't know your market yet."),
+        _art("library/how-much-space", "How much space do you really need for your first practice?"),
+    ],
+    "library/topics/leases-and-renewals": [
+        _art("library/lease-renewal", "The renewal clock starts two years early. Here's the calendar."),
+        _art("library/renewal-when-moving-is-not-realistic", "How to handle a renewal when moving is not realistic."),
+    ],
+    "library/topics/buying-a-building": [
+        _art("library/personal-guarantee", "What a personal guarantee actually costs you."),
+        _art("library/when-owning-is-cheaper", "When owning your first building is actually the cheaper move."),
+    ],
+    "library/topics/expansion": [
+        _art("library/expansion-and-real-estate-risk", "A simple way to think about expansion and real estate risk in the same breath."),
+        _art("library/outgrowing-your-space", "Outgrowing your space: renovate, relocate, or restructure."),
+    ],
+    "library/topics/sale-leasebacks": [
+        _art("library/sale-leaseback-explained", "The sale-leaseback, explained for practice owners."),
+        _art("library/reading-a-sale-leaseback-offer", "How to read a sale-leaseback offer without getting boxed out of ownership."),
+        _art("library/refinance-or-sale-leaseback", "Refinance or sale-leaseback: run both before signing either."),
+    ],
+    "library/topics/exit-and-succession": [
+        _art("library/building-and-practice-sale", "Does your building help or hurt your practice sale?"),
+        _art("library/estate-attorney-questions", "What your estate attorney should ask about your real estate."),
+    ],
+}
+
+# Featured cornerstone guides surfaced on the /library hub (ItemList).
+LIBRARY_FEATURED = [
+    _art("library/rent-buy-or-wait", "Rent, buy, or wait. The real math for a practice owner."),
+    _art("library/personal-guarantee", "What a personal guarantee actually costs you."),
+    _art("library/sale-leaseback-explained", "The sale-leaseback, explained for practice owners."),
+]
+
 
 def _meta(html, pattern):
     m = re.search(pattern, html)
@@ -157,6 +214,38 @@ def graph_for(slug, html):
 
     graph = [org_node(), website_node()]
 
+    if slug.startswith("library/topics/"):
+        name = HUB_TITLES.get(slug, title)
+        graph.append({
+            "@type": "CollectionPage",
+            "@id": url + "#webpage",
+            "name": name,
+            "description": desc,
+            "url": url,
+            "isPartOf": {"@id": SITE_ID},
+            "about": {"@id": ORG_ID},
+            "breadcrumb": {"@id": url + "#breadcrumbs"},
+        })
+        graph.append({
+            "@type": "BreadcrumbList",
+            "@id": url + "#breadcrumbs",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"},
+                {"@type": "ListItem", "position": 2, "name": "Library", "item": BASE + "/library/"},
+                {"@type": "ListItem", "position": 3, "name": name, "item": url},
+            ],
+        })
+        items = HUB_ITEMS.get(slug, [])
+        graph.append({
+            "@type": "ItemList",
+            "@id": url + "#items",
+            "itemListElement": [
+                {"@type": "ListItem", "position": i + 1, "name": n, "url": u}
+                for i, (n, u) in enumerate(items)
+            ],
+        })
+        return graph
+
     if slug.startswith("library/"):
         og_title = _meta(html, r'<meta property="og:title" content="([^"]*)"')
         graph.append({
@@ -196,6 +285,17 @@ def graph_for(slug, html):
         "about": {"@id": ORG_ID},
     }
     graph.append(page)
+
+    if slug == "library":
+        graph.append({
+            "@type": "ItemList",
+            "@id": url + "#featured",
+            "name": "Featured guides",
+            "itemListElement": [
+                {"@type": "ListItem", "position": i + 1, "name": n, "url": u}
+                for i, (n, u) in enumerate(LIBRARY_FEATURED)
+            ],
+        })
 
     if slug == "about":
         graph.append(ERIKA)

@@ -48,6 +48,14 @@ SLUGS = {
     "Refinance or Sale-Leaseback.dc.html": "library/refinance-or-sale-leaseback",
     "Reading a Sale-Leaseback Offer.dc.html": "library/reading-a-sale-leaseback-offer",
     "Renewal When Moving Is Not Realistic.dc.html": "library/renewal-when-moving-is-not-realistic",
+    # Library topic hub pages
+    "Hub Ownership Decision.dc.html": "library/topics/ownership-decision",
+    "Hub Starting a Practice.dc.html": "library/topics/starting-a-practice",
+    "Hub Leases and Renewals.dc.html": "library/topics/leases-and-renewals",
+    "Hub Buying a Building.dc.html": "library/topics/buying-a-building",
+    "Hub Expansion.dc.html": "library/topics/expansion",
+    "Hub Sale-Leasebacks.dc.html": "library/topics/sale-leasebacks",
+    "Hub Exit and Succession.dc.html": "library/topics/exit-and-succession",
     "Medre One-Page Guide (Print).dc.html": "print/one-page-guide",
     "Sale-Leaseback Checklist (Print).dc.html": "print/sale-leaseback-checklist",
 }
