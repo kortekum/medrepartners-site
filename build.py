@@ -48,6 +48,7 @@ SLUGS = {
     "Refinance or Sale-Leaseback.dc.html": "library/refinance-or-sale-leaseback",
     "Reading a Sale-Leaseback Offer.dc.html": "library/reading-a-sale-leaseback-offer",
     "Renewal When Moving Is Not Realistic.dc.html": "library/renewal-when-moving-is-not-realistic",
+    "Rent Reset at Renewal.dc.html": "library/rent-reset-at-renewal",
     # Library topic hub pages
     "Hub Ownership Decision.dc.html": "library/topics/ownership-decision",
     "Hub Starting a Practice.dc.html": "library/topics/starting-a-practice",

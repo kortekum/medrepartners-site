@@ -144,6 +144,7 @@ HUB_ITEMS = {
         _art("library/how-much-space", "How much space do you really need for your first practice?"),
     ],
     "library/topics/leases-and-renewals": [
+        _art("library/rent-reset-at-renewal", "The rent reset: why your renewal isn't the deal you signed."),
         _art("library/lease-renewal", "The renewal clock starts two years early. Here's the calendar."),
         _art("library/renewal-when-moving-is-not-realistic", "How to handle a renewal when moving is not realistic."),
     ],
