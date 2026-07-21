@@ -11,9 +11,17 @@
     html{scroll-behavior:smooth}
     body{margin:0;background:#fbfaf8}
     [data-mnav] summary::-webkit-details-marker{display:none}
-    a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #437678;outline-offset:3px}
+    a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #437678;outline-offset:3px}
+    #call-form label{display:block;font-family:'Jost',sans-serif;font-size:14px;font-weight:600;color:#20385a;margin:0 0 6px}
+    #call-form input[type=text],#call-form input[type=email],#call-form input[type=tel],#call-form textarea{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid rgba(32,56,90,0.3);border-radius:4px;font-family:'Nunito Sans',sans-serif;font-size:16px;color:#20385a;background:#ffffff}
+    #call-form textarea{resize:vertical;min-height:150px}
+    #call-form ::placeholder{color:rgba(32,56,90,0.45)}
+    #call-form button{font-family:'Jost',sans-serif;font-weight:600;font-size:16px;background:#437678;color:#ffffff;border:none;border-radius:4px;padding:14px 34px;cursor:pointer}
+    #call-form button:hover{background:#385f61}
+    #call-form button:disabled{opacity:0.6;cursor:default}
     @media (max-width:880px){
       [data-rsp]{grid-template-columns:1fr!important}
+      [data-formpad]{padding:28px 20px!important}
       [data-foot]{padding:48px 24px!important}
       [data-fnav]{flex-direction:column!important;align-items:flex-start!important;gap:18px!important}
       [data-fcta]{margin-left:0!important;margin-top:6px!important;padding:11px 20px!important}
@@ -129,15 +137,84 @@
   <!-- Container 2: The call -->
   <section id="book-main" data-screen-label="The call" style="background:#fbfaf8;padding:80px 24px 100px">
     <div style="max-width:800px;margin:0 auto">
-      <p style="font-size:17px;line-height:1.7;text-align:center;margin:0 0 40px">You'll be talking to Erika or Steve, the founders. Nothing you send commits you to anything, and we'll follow up in writing so you can take everything to your accountant and attorney.</p>
-      <div style="background:repeating-linear-gradient(45deg, rgba(32,56,90,0.03), rgba(32,56,90,0.03) 12px, rgba(32,56,90,0.07) 12px, rgba(32,56,90,0.07) 24px);border:1px dashed #8ab1b4;border-radius:4px;min-height:560px;display:flex;flex-direction:column;gap:16px;align-items:center;justify-content:center">
-        <img src="/assets/medre_mark.png" alt="" style="height:40px;opacity:0.4;display:block">
-        <span style="font-family:monospace;font-size:13px;color:#437678">Calendly inline embed (reuse existing embed code)</span>
+      <p style="font-size:17px;line-height:1.7;text-align:center;margin:0 0 40px">You'll be talking to Erika or Steve, the founders. Tell us a little about your situation below and we'll reply within one business day to set a time. Nothing you send commits you to anything, and we'll follow up in writing so you can take everything to your accountant and attorney.</p>
+
+      <form id="call-form" action="https://api.web3forms.com/submit" method="POST" data-formpad style="background:#ffffff;border:1px solid rgba(32,56,90,0.15);border-radius:4px;padding:40px;text-align:left">
+        <input type="hidden" name="access_key" value="9798134b-a75d-46ae-a65f-f65e05613132">
+        <input type="hidden" name="subject" value="Call request from medrepartners.com">
+        <input type="hidden" name="from_name" value="Medre website">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+
+        <div data-rsp style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:0 0 20px">
+          <div>
+            <label for="cf-name">Your name</label>
+            <input id="cf-name" type="text" name="name" required autocomplete="name">
+          </div>
+          <div>
+            <label for="cf-email">Email</label>
+            <input id="cf-email" type="email" name="email" required autocomplete="email">
+          </div>
+        </div>
+
+        <div data-rsp style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:0 0 20px">
+          <div>
+            <label for="cf-phone">Phone (optional)</label>
+            <input id="cf-phone" type="tel" name="phone" autocomplete="tel">
+          </div>
+          <div>
+            <label for="cf-practice">Your practice (optional)</label>
+            <input id="cf-practice" type="text" name="practice" placeholder="Specialty and location. One line is plenty.">
+          </div>
+        </div>
+
+        <div style="margin:0 0 28px">
+          <label for="cf-message">Your situation</label>
+          <textarea id="cf-message" name="message" required placeholder="A renewal coming up, a building you're eyeing, a sale-leaseback offer on your desk, or just the town where you want to practice."></textarea>
+        </div>
+
+        <button type="submit">Request a call</button>
+        <p id="form-error" hidden style="font-size:14px;color:#9c3a2e;margin:16px 0 0">That didn't go through. Try once more, or email us directly at hello@medrepartners.com.</p>
+      </form>
+
+      <div id="form-success" hidden data-formpad style="background:#ffffff;border:1px solid rgba(32,56,90,0.15);border-radius:4px;padding:56px 40px;text-align:center">
+        <img src="/assets/medre_mark.png" alt="" style="height:36px;display:block;margin:0 auto 18px">
+        <p style="font-family:'Jost',sans-serif;font-weight:600;font-size:26px;margin:0 0 12px">Got it.</p>
+        <p style="font-size:17px;line-height:1.7;margin:0">Your request is in. We'll reply from hello@medrepartners.com within one business day to set a time.</p>
       </div>
-      <p style="font-size:14px;text-align:center;margin:24px 0 0">No good time on the calendar? hello@medrepartners.com. We reply within one business day.</p>
-      <p style="font-size:13px;color:rgba(32,56,90,0.6);text-align:center;margin:12px 0 0">Booking runs through our scheduling provider. What you enter comes to us and nowhere else. Details on our Privacy page.</p>
+
+      <p style="font-size:14px;text-align:center;margin:24px 0 0">Prefer email? hello@medrepartners.com works too. Either way, we reply within one business day.</p>
+      <p style="font-size:13px;color:rgba(32,56,90,0.6);text-align:center;margin:12px 0 0">What you enter comes to us and nowhere else. Delivery runs through Web3Forms, our form provider. Details on our <a href="/privacy/" style="color:rgba(32,56,90,0.6);text-decoration:underline;text-underline-offset:3px" style-hover="color:#437678">Privacy page</a>.</p>
     </div>
   </section>
+
+  <script>
+  (function(){
+    var form=document.getElementById('call-form');
+    if(!form||!window.fetch)return;
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var btn=form.querySelector('button[type=submit]');
+      var err=document.getElementById('form-error');
+      err.hidden=true;
+      btn.disabled=true;
+      btn.textContent='Sending...';
+      fetch(form.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
+        .then(function(r){return r.json().then(function(d){return r.ok&&d.success;});})
+        .then(function(ok){
+          if(!ok)throw new Error('send failed');
+          var done=document.getElementById('form-success');
+          form.hidden=true;
+          done.hidden=false;
+          done.scrollIntoView({behavior:'smooth',block:'center'});
+        })
+        .catch(function(){
+          err.hidden=false;
+          btn.disabled=false;
+          btn.textContent='Request a call';
+        });
+    });
+  })();
+  </script>
 
   <footer data-foot style="background:#1a2e4a;padding:64px 48px;color:#ffffff">
     <div style="max-width:1120px;margin:0 auto">
