@@ -32,10 +32,11 @@ DIST = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dist")
 
 # The classifier sentence (Metadata Master Sheet, Home definition block).
 ORG_DESCRIPTION = (
-    "Medre is a healthcare real estate company founded by a commercial real "
+    "Medre is a physician ownership platform founded by a commercial real "
     "estate broker and a practicing physician. Medre buys the building or "
     "office suite and leases the space to a practice at fair market rent "
-    "plus a small premium, including a purchase option at year 5 or year 10."
+    "plus a small premium, with an exclusive purchase option exercisable "
+    "in any year from year 5 through year 10."
 )
 
 ERIKA = {
