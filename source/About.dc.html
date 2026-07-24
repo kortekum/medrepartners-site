@@ -8,30 +8,23 @@
 <body>
 <x-dc>
 <helmet>
-  <title>Book a call with Medre. Thirty minutes, real numbers, no deck</title>
-  <meta name="description" content="A working conversation with the founders. Bring your lease, your renewal terms, or the town you want to practice in. No obligation, and a straight answer if the answer is no.">
+  <title>About Medre. A broker and a physician, one structure</title>
+  <meta name="description" content="Medre was founded by Erika Christiansen, a licensed Colorado commercial real estate broker, and Steve Christiansen, MD, a practicing retina specialist. Based in Colorado, working with practices nationwide.">
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/medre_mark.png">
   <style>
     html{scroll-behavior:smooth}
     body{margin:0;background:#fbfaf8}
     [data-mnav] summary::-webkit-details-marker{display:none}
-    a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #437678;outline-offset:3px}
-    #call-form label{display:block;font-family:'Jost',sans-serif;font-size:14px;font-weight:600;color:#20385a;margin:0 0 6px}
-    #call-form input[type=text],#call-form input[type=email],#call-form input[type=tel],#call-form textarea{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid rgba(32,56,90,0.3);border-radius:4px;font-family:'Nunito Sans',sans-serif;font-size:16px;color:#20385a;background:#ffffff}
-    #call-form textarea{resize:vertical;min-height:150px}
-    #call-form ::placeholder{color:rgba(32,56,90,0.45)}
-    #call-form button{font-family:'Jost',sans-serif;font-weight:600;font-size:16px;background:#437678;color:#ffffff;border:none;border-radius:4px;padding:14px 34px;cursor:pointer}
-    #call-form button:hover{background:#385f61}
-    #call-form button:disabled{opacity:0.6;cursor:default}
+    a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #437678;outline-offset:3px}
     @media (max-width:880px){
       [data-rsp]{grid-template-columns:1fr!important}
-      [data-formpad]{padding:28px 20px!important}
       [data-foot]{padding:48px 24px!important}
       [data-fnav]{flex-direction:column!important;align-items:flex-start!important;gap:18px!important}
       [data-fcta]{margin-left:0!important;margin-top:6px!important;padding:11px 20px!important}
       [data-rsp-nav]{display:none!important}
       [data-mnav]{display:block!important}
+      [data-divider]{border-left:none!important;border-top:1px solid rgba(32,56,90,0.2)!important;padding:28px 0 0 0!important;margin-top:28px!important}
       [data-rsp-pad]{padding-left:24px!important;padding-right:24px!important}
     }
   </style>
@@ -46,7 +39,7 @@
         <a href="Home.dc.html" style="color:#20385a;text-decoration:none" style-hover="color:#437678">Home</a>
         <a href="How It Works.dc.html" style="color:#20385a;text-decoration:none" style-hover="color:#437678">How It Works</a>
         <a href="For Practice Owners.dc.html" style="color:#20385a;text-decoration:none" style-hover="color:#437678">For Practice Owners</a>
-        <a href="About.dc.html" style="color:#20385a;text-decoration:none" style-hover="color:#437678">About</a>
+        <a href="About.dc.html" style="color:#437678;text-decoration:none;border-bottom:2px solid #437678;padding-bottom:2px">About</a>
         <a href="Resources.dc.html" style="color:#20385a;text-decoration:none" style-hover="color:#437678">Library</a>
       </div>
       <a href="Book a Call.dc.html" style="background:#437678;color:#ffffff;text-decoration:none;padding:12px 24px;border-radius:4px;font-weight:600" style-hover="background:#385f61">Book a Call</a>
@@ -64,95 +57,49 @@
     </nav>
   </header>
 
-  <!-- Container 1: Hero (compact) -->
-  <section id="book-hero" data-screen-label="Book a Call hero" style="background:#20385a;padding:90px 24px 70px;text-align:center">
+  <!-- Container 1: Hero -->
+  <section id="about-hero" data-screen-label="About hero" style="background:#20385a;padding:120px 24px 100px;text-align:center">
     <div style="max-width:860px;margin:0 auto">
-      <h1 style="font-family:'Jost',sans-serif;font-weight:600;font-size:46px;line-height:1.15;color:#ffffff;margin:0 0 24px;text-wrap:balance">Thirty minutes. Real numbers. No deck.</h1>
-      <p style="font-size:20px;line-height:1.6;color:rgba(255,255,255,0.9);margin:0">This is a working conversation, not a pitch. Bring your lease, your renewal terms, or just the town you want to practice in. We’ll tell you whether this works for your situation, and if the better answer is buying a building yourself or staying put, we'll say so.</p>
+      <h1 style="font-family:'Jost',sans-serif;font-weight:600;font-size:48px;line-height:1.15;color:#ffffff;margin:0 0 28px;text-wrap:balance">One of us structures deals. One of us sees patients.</h1>
+      <p style="font-size:20px;line-height:1.6;color:rgba(255,255,255,0.9);margin:0">Medre exists because its founders kept watching doctors lease offices when they wished they could buy.</p>
     </div>
   </section>
 
-  <!-- Container 2: The call -->
-  <section id="book-main" data-screen-label="The call" style="background:#fbfaf8;padding:80px 24px 100px">
+  <!-- Container 2: The founders -->
+  <section id="about-story" data-screen-label="The founders" style="background:#fbfaf8;padding:100px 24px 80px">
     <div style="max-width:800px;margin:0 auto">
-      <p style="font-size:17px;line-height:1.7;text-align:center;margin:0 0 40px">You'll be talking to Erika or Steve, the founders. Tell us a little about your situation below and we'll reply within one business day to set a time. Nothing you send commits you to anything, and we'll follow up in writing so you can take everything to your accountant and attorney.</p>
-
-      <form id="call-form" action="https://api.web3forms.com/submit" method="POST" data-formpad style="background:#ffffff;border:1px solid rgba(32,56,90,0.15);border-radius:4px;padding:40px;text-align:left">
-        <input type="hidden" name="access_key" value="9798134b-a75d-46ae-a65f-f65e05613132">
-        <input type="hidden" name="subject" value="Call request from medrepartners.com">
-        <input type="hidden" name="from_name" value="Medre website">
-        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
-
-        <div data-rsp style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:0 0 20px">
-          <div>
-            <label for="cf-name">Your name</label>
-            <input id="cf-name" type="text" name="name" required autocomplete="name">
-          </div>
-          <div>
-            <label for="cf-email">Email</label>
-            <input id="cf-email" type="email" name="email" required autocomplete="email">
-          </div>
-        </div>
-
-        <div data-rsp style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:0 0 20px">
-          <div>
-            <label for="cf-phone">Phone (optional)</label>
-            <input id="cf-phone" type="tel" name="phone" autocomplete="tel">
-          </div>
-          <div>
-            <label for="cf-practice">Your practice (optional)</label>
-            <input id="cf-practice" type="text" name="practice" placeholder="Specialty and location. One line is plenty.">
-          </div>
-        </div>
-
-        <div style="margin:0 0 28px">
-          <label for="cf-message">Your situation</label>
-          <textarea id="cf-message" name="message" required placeholder="A renewal coming up, a building you're eyeing, a sale-leaseback offer on your desk, or just the town where you want to practice."></textarea>
-        </div>
-
-        <button type="submit">Request a call</button>
-        <p id="form-error" hidden style="font-size:14px;color:#9c3a2e;margin:16px 0 0">That didn't go through. Try once more, or email us directly at hello@medrepartners.com.</p>
-      </form>
-
-      <div id="form-success" hidden data-formpad style="background:#ffffff;border:1px solid rgba(32,56,90,0.15);border-radius:4px;padding:56px 40px;text-align:center">
-        <img src="assets/medre_mark.png" alt="" style="height:36px;display:block;margin:0 auto 18px">
-        <p style="font-family:'Jost',sans-serif;font-weight:600;font-size:26px;margin:0 0 12px">Got it.</p>
-        <p style="font-size:17px;line-height:1.7;margin:0">Your request is in. We'll reply from hello@medrepartners.com within one business day to set a time.</p>
+      <img src="assets/medre_mark.png" alt="" style="height:40px;display:block;margin:0 auto 48px">
+      <div style="font-size:17px;line-height:1.7;display:grid;gap:20px">
+        <p style="margin:0">Erika and Steve Christiansen have been investing in real estate since 2009: Erika holds the broker's license, and Steve holds the same investor's judgment plus the operating instincts of someone who actually runs a practice.</p>
+        <p style="margin:0">Erika is a licensed Colorado commercial real estate broker. She spends her time structuring deals, running market analyses, and has seen practice owners sign leases that worked against them, because the alternative was debt they weren't ready for.</p>
+        <p style="margin:0">Steve Christiansen, MD, is a practicing retina specialist running a multi-location practice in Colorado. He is an investor with the same seventeen years in real estate, plus the part no brokerage can supply. He has signed the leases, purchased the offices, and built a successful practice.</p>
+        <p style="margin:0">Medre is the structure they built together at their own kitchen table. When they made the decision to start the practice, they recognized the potential of real estate to create long-term wealth, purchasing their first office suite in 2021 with the practice as the tenant, and continued to do so for two additional office locations. Active in the startup ophthalmology practice space, Steve frequently advises friends and colleagues on starting their own practices, and encourages colleagues to buy instead of rent; Erika has helped provide suggestions for office spaces they might buy. With limited capital, these colleagues often choose to lease instead of buy, and end up growing a successful practice in an office they don't own, becoming handcuffed into staying in the space for 10 or 20 years - missing out on decades of rent growth, real estate appreciation, and the tax-advantages of real estate ownership.</p>
+        <p style="margin:0">Medre was born to combine Steve's experience as a doctor busy growing a multi-location ophthalmology practice with Erika's experience as a real estate broker, to help other startup doctors find their long-term practice location, keep their capital in the practice through its highest-growth years, and control when they become owners.</p>
       </div>
-
-      <p style="font-size:14px;text-align:center;margin:24px 0 0">Prefer email? hello@medrepartners.com works too. Either way, we reply within one business day.</p>
-      <p style="font-size:13px;color:rgba(32,56,90,0.6);text-align:center;margin:12px 0 0">What you enter comes to us and nowhere else. Delivery runs through Web3Forms, our form provider. Details on our <a href="Privacy.dc.html" style="color:rgba(32,56,90,0.6);text-decoration:underline;text-underline-offset:3px" style-hover="color:#437678">Privacy page</a>.</p>
     </div>
   </section>
 
-  <script>
-  (function(){
-    var form=document.getElementById('call-form');
-    if(!form||!window.fetch)return;
-    form.addEventListener('submit',function(e){
-      e.preventDefault();
-      var btn=form.querySelector('button[type=submit]');
-      var err=document.getElementById('form-error');
-      err.hidden=true;
-      btn.disabled=true;
-      btn.textContent='Sending...';
-      fetch(form.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
-        .then(function(r){return r.json().then(function(d){return r.ok&&d.success;});})
-        .then(function(ok){
-          if(!ok)throw new Error('send failed');
-          var done=document.getElementById('form-success');
-          form.hidden=true;
-          done.hidden=false;
-          done.scrollIntoView({behavior:'smooth',block:'center'});
-        })
-        .catch(function(){
-          err.hidden=false;
-          btn.disabled=false;
-          btn.textContent='Request a call';
-        });
-    });
-  })();
-  </script>
+  <!-- Container 3: On being early -->
+  <section id="about-early" data-screen-label="On being early" style="background:#e9f3f3;padding:100px 24px">
+    <div style="max-width:800px;margin:0 auto">
+      <h2 style="font-family:'Jost',sans-serif;font-weight:600;font-size:38px;line-height:1.2;text-align:center;margin:0 0 40px;text-wrap:balance">We're a young company. Here's why that's your advantage.</h2>
+      <div style="font-size:17px;line-height:1.7;display:grid;gap:20px">
+        <p style="margin:0">We are a small company that underwrites like a large one. Every acquisition passes the same discipline before we commit: lender-grade underwriting, an occupancy analysis against the practice's own economics, and investment committee review on a standard that doesn't bend for any single deal. Being early means three specific things for the first practices we work with. You deal directly with the founders on every deal, start to finish. We are selective, because our first buildings and first tenants define this company. And your deal gets structured for your situation, not run through a template built for assets under management.</p>
+        <p style="margin:0">We are not backed by private equity. We fund your office purchase with our own savings, and if our savings aren't enough, we will reach out to friends and family, but not to a private equity fund.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Container 4: Incentives -->
+  <section id="about-incentives" data-screen-label="Incentives" style="background:#fbfaf8;padding:100px 24px 110px">
+    <div style="max-width:800px;margin:0 auto">
+      <h2 style="font-family:'Jost',sans-serif;font-weight:600;font-size:38px;line-height:1.2;text-align:center;margin:0 0 40px;text-wrap:balance">Our incentives, on the table.</h2>
+      <p style="font-size:17px;line-height:1.7;margin:0">We earn in three places, and every one is in writing before you sign: the Exclusive Purchase Option Fee, the price of holding the building's future for you alone; a small premium on your rent, the carrying cost of that option; and a purchase premium above appraised value if you buy, one that declines the longer you lease. When practices choose not to buy, we keep good medical buildings instead. Both outcomes work for us, which is exactly why we can hand you a real option instead of a teaser. We're not betting against you exercising it, and we're not a landlord hoping you stay stuck. This is a long-term ownership partnership: your practice succeeding is what makes the whole structure work, for you and for us.</p>
+      <div style="text-align:center;margin-top:40px">
+        <a href="Book a Call.dc.html" style="display:inline-block;background:#437678;color:#ffffff;text-decoration:none;font-family:'Jost',sans-serif;font-weight:600;font-size:16px;padding:16px 36px;border-radius:4px" style-hover="background:#385f61">Book a call with us</a>
+      </div>
+    </div>
+  </section>
 
   <footer data-foot style="background:#1a2e4a;padding:64px 48px;color:#ffffff">
     <div style="max-width:1120px;margin:0 auto">

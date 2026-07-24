@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>The Medre Structure, On One Page | Medre</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/medre_mark.png">
+  <style>
+    body{margin:0;background:#e8e6e1}
+    a{color:#437678}
+    a:hover{color:#385f61}
+  </style>
+</helmet>
+
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0.55in" hint-size="100%,1100px">
+  <div style="font-family:'Nunito Sans',sans-serif;color:#20385a">
+
+    <!-- Header -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:22px">
+      <img src="assets/medre_logo.png" alt="Medre" style="height:24px;display:block">
+      <p style="font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(32,56,90,0.55);margin:0">The one-page guide</p>
+    </div>
+
+    <!-- Title block -->
+    <h1 style="font-family:'Jost',sans-serif;font-weight:600;font-size:27px;line-height:1.15;margin:0 0 8px;max-width:5.6in">Control when you own your practice location.</h1>
+    <p style="font-size:12px;line-height:1.6;color:rgba(32,56,90,0.75);margin:0 0 24px;max-width:5.6in">We buy the building. You lease it at fair market rent plus a small premium, and your capital stays in the practice. An exclusive purchase option lets you buy in any year from 5 through 10, at a price set by independent appraisal plus a premium that declines over time. Built to forward to a spouse, partner, or accountant. Plainly, with the tradeoffs left in.</p>
+
+    <!-- Two columns -->
+    <div style="display:grid;grid-template-columns:1fr 2.3in;gap:0.35in;margin:0 0 20px">
+
+      <!-- LEFT: timeline -->
+      <div>
+        <p style="font-family:'Jost',sans-serif;font-weight:600;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#437678;border-top:2px solid #20385a;padding-top:8px;margin:0 0 14px">The timeline</p>
+        <div style="display:grid;gap:12px">
+          <div style="display:flex;gap:12px">
+            <p style="font-family:'Jost',sans-serif;font-weight:600;font-size:13px;color:#437678;margin:0;flex-shrink:0;width:14px">1</p>
+            <p style="font-size:11.5px;line-height:1.55;margin:0"><strong style="font-family:'Jost',sans-serif">The call.</strong> Thirty minutes with the founders to introduce ourselves, answer your questions, and determine if we would be a good fit for your situation.</p>
+          </div>
+          <div style="display:flex;gap:12px">
+            <p style="font-family:'Jost',sans-serif;font-weight:600;font-size:13px;color:#437678;margin:0;flex-shrink:0;width:14px">2</p>
+            <p style="font-size:11.5px;line-height:1.55;margin:0"><strong style="font-family:'Jost',sans-serif">The search.</strong> We find the right building, or evaluate the one you&rsquo;re in. You approve location, space, and numbers before anything is signed.</p>
+          </div>
+          <div style="display:flex;gap:12px">
+            <p style="font-family:'Jost',sans-serif;font-weight:600;font-size:13px;color:#437678;margin:0;flex-shrink:0;width:14px">3</p>
+            <p style="font-size:11.5px;line-height:1.55;margin:0"><strong style="font-family:'Jost',sans-serif">The close.</strong> Medre buys the building with our capital and our mortgage. Your lease and your Exclusive Purchase Option are signed the same day, and a one-time option fee makes the future purchase yours alone. Every term is fixed here, before the first rent check.</p>
+          </div>
+          <div style="display:flex;gap:12px">
+            <p style="font-family:'Jost',sans-serif;font-weight:600;font-size:13px;color:#437678;margin:0;flex-shrink:0;width:14px">4</p>
+            <p style="font-size:11.5px;line-height:1.55;margin:0"><strong style="font-family:'Jost',sans-serif">The lease years.</strong> You see patients. We own the building, the debt, and the landlord obligations. Your capital stays in the practice.</p>
+          </div>
+          <div style="display:flex;gap:12px">
+            <p style="font-family:'Jost',sans-serif;font-weight:600;font-size:13px;color:#437678;margin:0;flex-shrink:0;width:14px">5</p>
+            <p style="font-size:11.5px;line-height:1.55;margin:0"><strong style="font-family:'Jost',sans-serif">Years 5 through 10.</strong> Your option window. Exercise in the year you choose. A right, not an obligation. Three outcomes, all yours to choose:</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:14px 0 0 26px">
+          <div style="border-top:1px solid rgba(32,56,90,0.3);padding-top:7px">
+            <p style="font-family:'Jost',sans-serif;font-weight:600;font-size:11.5px;margin:0 0 3px">Buy</p>
+            <p style="font-size:10.5px;line-height:1.5;color:rgba(32,56,90,0.8);margin:0">Appraisal sets the market value; your price is that value plus the declining premium for your year. You obtain financing, close, and the office is yours.</p>
+          </div>
+          <div style="border-top:1px solid rgba(32,56,90,0.3);padding-top:7px">
+            <p style="font-family:'Jost',sans-serif;font-weight:600;font-size:11.5px;margin:0 0 3px">Renew</p>
+            <p style="font-size:10.5px;line-height:1.5;color:rgba(32,56,90,0.8);margin:0">Not ready yet. The option stays open through year 10, and the purchase premium keeps declining.</p>
+          </div>
+          <div style="border-top:1px solid rgba(32,56,90,0.3);padding-top:7px">
+            <p style="font-family:'Jost',sans-serif;font-weight:600;font-size:11.5px;margin:0 0 3px">Walk</p>
+            <p style="font-size:10.5px;line-height:1.5;color:rgba(32,56,90,0.8);margin:0">Let it lapse, finish the lease. No mortgage in your name.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: what you pay + option -->
+      <div>
+        <p style="font-family:'Jost',sans-serif;font-weight:600;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#437678;border-top:2px solid #20385a;padding-top:8px;margin:0 0 12px">What you pay</p>
+        <div style="display:flex;height:24px;border-radius:3px;overflow:hidden;margin:0 0 5px">
+          <div style="flex:0 0 85%;background:#20385a;color:#ffffff;display:flex;align-items:center;justify-content:center;font-family:'Jost',sans-serif;font-weight:600;font-size:9px;letter-spacing:0.5px">Fair market rent</div>
+          <div style="flex:0 0 15%;background:#437678"></div>
+        </div>
+        <p style="font-size:9.5px;color:rgba(32,56,90,0.6);margin:0 0 10px">The anatomy of your rent check. The teal slice is the premium.</p>
+        <p style="font-size:11px;line-height:1.55;margin:0 0 8px">One upfront fee, the Exclusive Purchase Option Fee, makes the future purchase exclusively yours. It is not a deposit and is not credited toward the price. Then the base rent is fair market, the same number any landlord would charge, and the premium is a small percentage on top: the carrying cost of your ownership option. You see every number, separately, before you sign.</p>
+        <p style="font-size:11px;line-height:1.55;margin:0 0 20px">What it buys: no down payment, no mortgage in your name, and an exclusive path to ownership in writing from day one.</p>
+
+        <p style="font-family:'Jost',sans-serif;font-weight:600;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#437678;border-top:2px solid #20385a;padding-top:8px;margin:0 0 12px">The option</p>
+        <p style="font-size:11px;line-height:1.55;margin:0 0 8px"><strong style="font-family:'Jost',sans-serif">Appraisal, not negotiation.</strong> The price is fair market value set by independent appraisal at the time of sale, plus a purchase premium that declines each year of the option window, on a schedule in your documents from day one. Neither side gets to move the number.</p>
+        <p style="font-size:11px;line-height:1.55;margin:0">What you never face is a landlord naming a price because they know you can&rsquo;t leave.</p>
+      </div>
+    </div>
+
+    <!-- Tradeoffs: the single highlighted block -->
+    <div style="background:#e9f3f3;border-radius:4px;padding:16px 20px;margin:0 0 20px">
+      <p style="font-family:'Jost',sans-serif;font-weight:600;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#437678;margin:0 0 10px">The tradeoffs, plainly</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;font-size:11px;line-height:1.55">
+        <p style="margin:0"><strong style="font-family:'Jost',sans-serif">The fee and premium are real money.</strong> The fee is not refundable, and if you never exercise, both were the cost of keeping the choice open.</p>
+        <p style="margin:0"><strong style="font-family:'Jost',sans-serif">Today&rsquo;s price is not locked.</strong> The appraisal at exercise sets it. If your market rises you pay more; if it softens, less. The declining premium is the part you control.</p>
+        <p style="margin:0"><strong style="font-family:'Jost',sans-serif">Buying yourself can be cheaper.</strong> If you have the capital and certainty, do that instead. We&rsquo;ll say so on the call.</p>
+      </div>
+    </div>
+
+    <!-- Five terms -->
+    <p style="font-family:'Jost',sans-serif;font-weight:600;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#437678;border-top:2px solid #20385a;padding-top:8px;margin:0 0 8px">Five terms to interrogate in any purchase option, ours included</p>
+    <p style="font-size:11px;line-height:1.6;margin:0 0 22px">Who sets the price &nbsp;&middot;&nbsp; When the valuation happens &nbsp;&middot;&nbsp; What conditions attach &nbsp;&middot;&nbsp; What happens if you pass &nbsp;&middot;&nbsp; Whether it survives a practice sale. Bring your attorney and accountant, and have them read everything. The structure survives scrutiny.</p>
+
+    <!-- Footer -->
+    <div style="border-top:1px solid rgba(32,56,90,0.25);padding-top:10px;display:flex;justify-content:space-between;align-items:flex-start;gap:24px">
+      <p style="font-size:9.5px;line-height:1.55;color:rgba(32,56,90,0.6);margin:0;max-width:4.9in">Erika Christiansen, licensed Colorado commercial real estate broker, and Steve Christiansen, MD, practicing retina specialist and practice owner. Equal partners, investing since 2009. Nothing here is legal, tax, accounting, financing, or investment advice; review any transaction with your own attorney and accountant before you sign.</p>
+      <p style="font-family:'Jost',sans-serif;font-size:9.5px;line-height:1.55;color:rgba(32,56,90,0.6);margin:0;text-align:right;white-space:nowrap">MedRe Partners, LLC<br>medre.co</p>
+    </div>
+
+  </div>
+</x-import>
+
+</x-dc>
+</body>
+</html>
